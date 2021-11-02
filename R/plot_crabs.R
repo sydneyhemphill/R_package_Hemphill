@@ -8,5 +8,3 @@ augmented_fit
 qqnorm(augmented_fit$.resid)
 qqline(augmented_fit$.resid)
 qqline(augmented_fit$.resid, col = "red")
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
