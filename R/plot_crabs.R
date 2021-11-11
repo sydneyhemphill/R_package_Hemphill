@@ -8,3 +8,5 @@ augmented_fit
 qqnorm(augmented_fit$.resid)
 qqline(augmented_fit$.resid)
 qqline(augmented_fit$.resid, col = "red")
+#Input: DataFrame
+#Output: ggplot of crabs data
