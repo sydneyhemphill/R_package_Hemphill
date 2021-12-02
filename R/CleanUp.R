@@ -8,8 +8,8 @@
 #' no.na(x)
 #' no.na("/cloud/project/data/Butterfly_data.csv")
 #' no.na("/cloud/project/data/Phenology_data.csv")
-#Input: dataframes
-#Output: dataframes with no NAs
+#' Input: dataframes
+#' Output: dataframes with no NAs
 no.na<- function(file = "/cloud/project/data/Butterfly_data.csv"){
       butterfly<- read_csv(file)
       butterfly <- na.omit(butterfly)

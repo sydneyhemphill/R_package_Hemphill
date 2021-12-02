@@ -3,7 +3,7 @@ Title: R Starter Pack: Clean Up, Plotting, Stat Tests
 Version: 0.0.0.9000
 Authors@R: 
     person("Sydney", "Hemphill", , "sydney.hemphill@selu.edu", role = c("aut", "cre"))
-Description: This package is meant to be a starter package for R, allowing shortcuts and easily accessible processes like: clean up (removing NAs, making columns uniform), plotting (simple ggplots (scatter plots)), and statistical tests (males vs. females, etc.). Hopefully, the package will make simple processes easier to do, allowing less room for mistakes in beginner R users.
+Description: This package is meant to be a starter package for R, allowing shortcuts and easily accessible processes like: clean up (removing NAs), plotting (simple ggplots (scatter plots)), and statistical tests (summary of a linear model of data). Hopefully, the package will make simple processes easier to do, allowing less room for mistakes in beginner R users.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
