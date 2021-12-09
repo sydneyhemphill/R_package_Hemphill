@@ -33,6 +33,7 @@ download.file("https://raw.githubusercontent.com/sydneyhemphill/R_package_Hemphi
 Statistical Test:
 This function is helpful because it takes out the chance of any mistakes while typing and will save time. The output of the data should be a summary of the linear model for your data. 
 ```{r} 
+library(HemphillRPackage)
 linear.model <- function(x,y,z){
   model.fit<- lm(x ~ y, data = z)
   return(summary(model.fit))
@@ -48,6 +49,7 @@ Plot Function:
 This function is helpful because it creates basic plots, so you don't have to type out everything when comparing data or you need a lot of basic graphs for your reports. The output of the data should be a simple gg (scatter) plot.
 
 ```{r}
+library(HemphillRPackage)
 plot<- function(z, x, y){
   product<- ggplot(z, aes(x=x, y = y)) + geom_point()
   return (product)
@@ -64,6 +66,7 @@ Clean Up Function:
 This function removes NAs from databases. Removing NAs can take a long time, especially with large databases, so this function takes all the work, and possibility of error, out by removing the NAs as the file is read in.
 
 ```{r}
+library(HemphillRPackage)
 no.na<- function(file = "/cloud/project/data/Butterfly_data.csv"){
       butterfly<- read_csv(file)
       butterfly <- na.omit(butterfly)
