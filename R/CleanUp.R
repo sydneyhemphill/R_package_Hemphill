@@ -8,6 +8,7 @@
 #' no.na(x)
 #' no.na("/cloud/project/data/Butterfly_data.csv")
 #' no.na("/cloud/project/data/Phenology_data.csv")
+#' @export
 #' Input: dataframes
 #' Output: dataframes with no NAs
 no.na<- function(file = "/cloud/project/data/Butterfly_data.csv"){

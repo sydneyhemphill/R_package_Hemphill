@@ -7,6 +7,7 @@
 #' @usage
 #' linear.model(butterfly.data$SpringTemp, butterfly.data$Year, butterfly.data)
 #' linear.model(crabs$sex, crabs$color, crabs)
+#' @export
 #' Input: dataframe
 #' Output: a linear model 
 linear.model <- function(x,y,z){
