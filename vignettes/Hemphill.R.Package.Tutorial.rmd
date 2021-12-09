@@ -1,0 +1,77 @@
+---
+title: "Hemphill R Package"
+author: "Sydney Hemphill"
+date: "12/2/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Installation
+Load in common libraries used by this package.
+
+```{r eval = FALSE}
+library(ggplot2)
+library(tidyverse)
+```
+
+Now, we install my R package.
+
+```{r eval = FALSE}
+devtools::install_github("sydneyhemphill/R_Package_Hemphill")
+```
+
+Let us download some data for our package:
+```{r}
+download.file("https://raw.githubusercontent.com/sydneyhemphill/R_package_Hemphill/master/data/Butterfly_data.csv" , destfile = "/cloud/project/data/butterfly_data.csv")
+```
+
+## Working Example
+
+Statistical Test:
+This function is helpful because it takes out the chance of any mistakes while typing and will save time. The output of the data should be a summary of the linear model for your data. 
+```{r} 
+linear.model <- function(x,y,z){
+  model.fit<- lm(x ~ y, data = z)
+  return(summary(model.fit))
+}
+```
+For an example of this function in use:
+```{r}
+library(HemphillRPackage)
+linear.model(butterfly.data$SpringTemp,butterfly.data$Year, butterfly.data)
+```
+
+Plot Function:
+This function is helpful because it creates basic plots, so you don't have to type out everything when comparing data or you need a lot of basic graphs for your reports. The output of the data should be a simple gg (scatter) plot.
+
+```{r}
+plot<- function(z, x, y){
+  product<- ggplot(z, aes(x=x, y = y)) + geom_point()
+  return (product)
+}
+```
+An example of this function in use:
+
+```{r}
+library(HemphillRPackage)
+plot(butterfly.data, butterfly.data$Year, butterfly.data$Day )
+```
+
+Clean Up Function:
+This function removes NAs from databases. Removing NAs can take a long time, especially with large databases, so this function takes all the work, and possibility of error, out by removing the NAs as the file is read in.
+
+```{r}
+no.na<- function(file = "/cloud/project/data/Butterfly_data.csv"){
+      butterfly<- read_csv(file)
+      butterfly <- na.omit(butterfly)
+      return(butterfly)
+   }
+```
+An example of this function in action is:
+```{r}
+library(HemphillRPackage)
+no.na("/cloud/project/data/Butterfly_data.csv")
+```
